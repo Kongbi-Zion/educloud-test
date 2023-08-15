@@ -43,7 +43,6 @@
                 lastname: "",
                 email: "",
                 password: "",
-                // confirmPassword: "",
             }
         },
         methods: {
