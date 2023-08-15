@@ -17,8 +17,9 @@
 
         methods:{
             async signOut(){
-                const result = await Auth.signOut();
-                if(result){
+                let result = "" 
+                result = await Auth.signOut();
+                if(result != ""){
                     navigateTo("/");
                 }
             }
