@@ -18,13 +18,14 @@
    
    <div>
         <hr/>
-        <button @click="federatedGoogleSignup">Sign In with google</button>
+        <button @click="federatedGoogleSignup()">Sign In with google</button>
     </div>
 
 </template>
 
 <script>
    import { Auth } from "aws-amplify";
+   import { CognitoHostedUIIdentityProvider } from "@aws-amplify/auth/lib/types";
    export default {
        name: "Confirm",
        data() {
@@ -46,6 +47,7 @@
             },
 
             async federatedGoogleSignup() {
+                console.log("federatedGoogleSignup")
                  try{
                      const response = await Auth.federatedSignIn({
                          provider: CognitoHostedUIIdentityProvider.Google,

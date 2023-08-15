@@ -26,7 +26,7 @@
  
              <div>
                  <hr/>
-                 <button @click="federatedGoogleSignup">Sign In with google</button>
+                 <button @click="federatedGoogleSignup()">Sign In with google</button>
              </div>
          </div>
     </div>
@@ -47,6 +47,7 @@
         },
         methods: {
              async federatedGoogleSignup() {
+                console.log("federatedGoogleSignup")
                  try{
                      const response = await Auth.federatedSignIn({
                          provider: CognitoHostedUIIdentityProvider.Google,
