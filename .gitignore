@@ -5,6 +5,7 @@
 .nitro
 .cache
 dist
+amplify/
 
 # Node dependencies
 node_modules
