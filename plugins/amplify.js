@@ -11,7 +11,7 @@ export default defineNuxtPlugin(async (nuxtApp) => {
     var exports = {};
   } 
 
-  Amplify.Logger.LOG_LEVEL = "DEBUG"
+  // Amplify.Logger.LOG_LEVEL = "DEBUG"
   API.configure({ ...config });
   Auth.configure({...config})
   nuxtApp.vueApp.use(Amplify);
