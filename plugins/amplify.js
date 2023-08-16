@@ -1,7 +1,7 @@
 import { Amplify } from "@aws-amplify/core";
 import config from "../src/aws-exports";
 
-config.oauth["redirectSignIn"] = `${window.location.origin}/auth/`;
+config.oauth["redirectSignIn"] = `${window.location.origin}/external-auth/`;
 config.oauth["redirectSignOut"] = `${window.location.origin}/`;
 
 export default defineNuxtPlugin(async (nuxtApp) => {
